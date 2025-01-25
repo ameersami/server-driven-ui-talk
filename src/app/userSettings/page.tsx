@@ -3,6 +3,7 @@
 import { type ChangeEvent, FormEvent, startTransition, useActionState } from 'react';
 
 import styles from './page.module.css';
+import { Input } from '@/Components/ui/input';
 
 const UserSettingsPage = () => {
   
@@ -30,15 +31,12 @@ const UserSettingsPage = () => {
   
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        key={`text-name-input`}
+      <Input
         type="text"
         name="name"
-        value={state.get('name')?.toString()}
+        defaultValue={state.get('name')?.toString()}
         onBlur={handleInputValueChange}
       />
-      {/* <button type="submit" disabled={isPending}>Update</button> */}
-      {/* {error && <p>{error}</p>} */}
     </form>
   );
 }
