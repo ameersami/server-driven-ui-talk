@@ -1,0 +1,279 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-01-20T10:30:00Z",
+  "feed": {
+    "sections": [
+      {
+        "id": "featured",
+        "type": "hero",
+        "title": "Featured Stories",
+        "layout": {
+          "type": "carousel",
+          "properties": {
+            "autoPlay": true,
+            "intervalMs": 5000
+          }
+        },
+        "items": [
+          {
+            "id": "news-001",
+            "type": "article",
+            "title": "Breaking News Headline",
+            "subtitle": "Key developments in this major story",
+            "timestamp": "2025-01-20T10:00:00Z",
+            "author": {
+              "name": "Jane Smith",
+              "avatar": "/images/authors/jane-smith.jpg"
+            },
+            "category": "Politics",
+            "imageUrl": "/images/news/headline-001.jpg",
+            "badge": {
+              "text": "Breaking",
+              "type": "urgent"
+            }
+          },
+          {
+            "id": "news-002",
+            "type": "article",
+            "title": "Global Climate Summit Concludes",
+            "subtitle": "World leaders reach historic agreement",
+            "timestamp": "2025-01-20T09:45:00Z",
+            "author": {
+              "name": "Robert Chen",
+              "avatar": "/images/authors/robert-chen.jpg"
+            },
+            "category": "Environment",
+            "imageUrl": "/images/news/climate-001.jpg"
+          },
+          {
+            "id": "news-003",
+            "type": "article",
+            "title": "Space Mission Launch Success",
+            "subtitle": "New era of space exploration begins",
+            "timestamp": "2025-01-20T09:30:00Z",
+            "author": {
+              "name": "Sarah Johnson",
+              "avatar": "/images/authors/sarah-johnson.jpg"
+            },
+            "category": "Science",
+            "imageUrl": "/images/news/space-001.jpg"
+          },
+          {
+            "id": "news-010",
+            "type": "article",
+            "title": "Artificial Intelligence Breakthrough",
+            "subtitle": "Revolutionary advancement in machine learning",
+            "timestamp": "2025-01-20T08:15:00Z",
+            "author": {
+              "name": "David Lee",
+              "avatar": "/images/authors/david-lee.jpg"
+            },
+            "category": "Technology",
+            "imageUrl": "/images/news/ai-001.jpg"
+          },
+          {
+            "id": "news-011",
+            "type": "article",
+            "title": "Major Sports Championship Final",
+            "subtitle": "Historic match breaks viewing records",
+            "timestamp": "2025-01-20T08:00:00Z",
+            "author": {
+              "name": "Mike Thompson",
+              "avatar": "/images/authors/mike-thompson.jpg"
+            },
+            "category": "Sports",
+            "imageUrl": "/images/news/sports-002.jpg"
+          }
+        ]
+      },
+      {
+        "id": "top-stories",
+        "type": "grid",
+        "title": "Top Stories",
+        "layout": {
+          "type": "vertical",
+          "columns": 2,
+          "properties": {
+            "spacing": 16
+          }
+        },
+        "items": [
+          {
+            "id": "news-004",
+            "type": "article",
+            "title": "Technology Update",
+            "subtitle": "Latest developments in tech",
+            "timestamp": "2025-01-20T09:30:00Z",
+            "author": {
+              "name": "John Doe",
+              "avatar": "/images/authors/john-doe.jpg"
+            },
+            "category": "Technology",
+            "imageUrl": "/images/news/tech-001.jpg",
+            "readTime": "5 min"
+          },
+          {
+            "id": "news-005",
+            "type": "article",
+            "title": "Economic Forecast 2025",
+            "subtitle": "Expert analysis of market trends",
+            "timestamp": "2025-01-20T09:15:00Z",
+            "author": {
+              "name": "Maria Garcia",
+              "avatar": "/images/authors/maria-garcia.jpg"
+            },
+            "category": "Business",
+            "imageUrl": "/images/news/economy-001.jpg",
+            "readTime": "8 min"
+          },
+          {
+            "id": "news-006",
+            "type": "article",
+            "title": "Healthcare Innovation",
+            "subtitle": "Breakthrough in medical research",
+            "timestamp": "2025-01-20T09:00:00Z",
+            "author": {
+              "name": "Dr. James Wilson",
+              "avatar": "/images/authors/james-wilson.jpg"
+            },
+            "category": "Health",
+            "imageUrl": "/images/news/health-001.jpg",
+            "readTime": "6 min"
+          },
+          {
+            "id": "news-012",
+            "type": "article",
+            "title": "Green Energy Revolution",
+            "subtitle": "New sustainable power breakthrough",
+            "timestamp": "2025-01-20T07:45:00Z",
+            "author": {
+              "name": "Lisa Green",
+              "avatar": "/images/authors/lisa-green.jpg"
+            },
+            "category": "Environment",
+            "imageUrl": "/images/news/energy-001.jpg",
+            "readTime": "7 min"
+          },
+          {
+            "id": "news-013",
+            "type": "article",
+            "title": "Education System Reform",
+            "subtitle": "Major changes in learning approach",
+            "timestamp": "2025-01-20T07:30:00Z",
+            "author": {
+              "name": "Prof. Alan Brown",
+              "avatar": "/images/authors/alan-brown.jpg"
+            },
+            "category": "Education",
+            "imageUrl": "/images/news/education-001.jpg",
+            "readTime": "10 min"
+          },
+          {
+            "id": "news-014",
+            "type": "article",
+            "title": "Urban Development Plan",
+            "subtitle": "City announces major infrastructure project",
+            "timestamp": "2025-01-20T07:15:00Z",
+            "author": {
+              "name": "Rachel Martinez",
+              "avatar": "/images/authors/rachel-martinez.jpg"
+            },
+            "category": "Local",
+            "imageUrl": "/images/news/urban-001.jpg",
+            "readTime": "4 min"
+          }
+        ]
+      },
+      {
+        "id": "recommended",
+        "type": "list",
+        "title": "Recommended for You",
+        "layout": {
+          "type": "horizontal-scroll",
+          "properties": {
+            "snapToItem": true,
+            "showScrollbar": false
+          }
+        },
+        "items": [
+          {
+            "id": "news-007",
+            "type": "article",
+            "format": "compact",
+            "title": "Sports Update",
+            "category": "Sports",
+            "imageUrl": "/images/news/sports-001.jpg"
+          },
+          {
+            "id": "news-008",
+            "type": "article",
+            "format": "compact",
+            "title": "Entertainment Weekly Recap",
+            "category": "Entertainment",
+            "imageUrl": "/images/news/entertainment-001.jpg"
+          },
+          {
+            "id": "news-009",
+            "type": "article",
+            "format": "compact",
+            "title": "Cultural Festival Preview",
+            "category": "Culture",
+            "imageUrl": "/images/news/culture-001.jpg"
+          },
+          {
+            "id": "news-015",
+            "type": "article",
+            "format": "compact",
+            "title": "Food Trends 2025",
+            "category": "Lifestyle",
+            "imageUrl": "/images/news/food-001.jpg"
+          },
+          {
+            "id": "news-016",
+            "type": "article",
+            "format": "compact",
+            "title": "Travel Destinations Guide",
+            "category": "Travel",
+            "imageUrl": "/images/news/travel-001.jpg"
+          },
+          {
+            "id": "news-017",
+            "type": "article",
+            "format": "compact",
+            "title": "Fashion Week Highlights",
+            "category": "Fashion",
+            "imageUrl": "/images/news/fashion-001.jpg"
+          },
+          {
+            "id": "news-018",
+            "type": "article",
+            "format": "compact",
+            "title": "Book Review Roundup",
+            "category": "Literature",
+            "imageUrl": "/images/news/books-001.jpg"
+          }
+        ]
+      }
+    ],
+    "actions": {
+      "refresh": {
+        "type": "api",
+        "method": "GET",
+        "url": "/api/feed/refresh"
+      },
+      "loadMore": {
+        "type": "api",
+        "method": "GET",
+        "url": "/api/feed/more",
+        "params": {
+          "page": "{{nextPage}}"
+        }
+      }
+    },
+    "meta": {
+      "nextPage": 2,
+      "hasMore": true,
+      "totalItems": 50
+    }
+  }
+}
