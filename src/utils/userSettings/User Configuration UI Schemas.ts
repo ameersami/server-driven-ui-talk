@@ -4,6 +4,7 @@ interface BaseComponent {
   id: string;
   label: string;
   required?: boolean;
+  selectedValue?: string | Array<string>;
 }
 
 // Validation rules for various field types

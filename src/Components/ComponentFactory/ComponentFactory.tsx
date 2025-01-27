@@ -1,47 +1,54 @@
+'use client';
+
 import { type FormComponent } from "@/utils/userSettings/User Configuration UI Schemas";
 import { Input } from "../ui/input";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select";
+import { Label } from "../ui/label";
+import { Checkbox } from "../ui/checkbox";
+import { ChangeEvent, useContext, useRef } from "react";
+import { UserSettingsFormContext } from "../UserSettingsForm/UserSettingsForm";
 
-export type Component = {
-  defaultValue: string;
-} & FormComponent
+const ComponentFactory = (component: FormComponent) => {
 
-const ComponentFactory = (component: Component) => {
+  const compRef = useRef<any>(null);
+
+  const handleChange = () => {
+    if (compRef.current) {
+      (compRef?.current as any).form?.requestSubmit();
+    }
+  };
+
   switch (component.type) {
     case 'textInput':
       return (
-        <>
-          <label
-            htmlFor={component.id}
-            key={`${component.id}-label`}
-          >
-            {component.label}
-          </label>
+        <div className="grid w-full max-w-sm items-center gap-1.5">
+          <Label htmlFor={component.id}>{component.label}</Label>
           <Input
-            key={`${component.id}-input`}
+            ref={compRef}
             id={component.id}
-            name={component.label}
             type="text"
+            name={component.id}
             defaultValue={component.defaultValue ?? ''}
+            onBlur={handleChange}
           />
-        </>
-      );
-    case 'multiSelect':
-      return (
-        <div>
-          Hi I'm a multi-select
         </div>
       );
     case 'select':
+    case 'multiSelect':
       return (
-        <div>
-          Hi I'm a select
-        </div>
-      );
-    case 'toggle':
-      return (
-        <div>
-          Hi I'm a toggle
-        </div>
+        <Select name={component.id} onValueChange={handleChange}>
+          <SelectTrigger className="w-[180px]" ref={compRef}>
+            <SelectValue placeholder={component.label}/>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>{component.label}</SelectLabel>
+              {component.options.map(option => (
+                <SelectItem key={`${component.id}-${option.value}-select-item`} value={option.value}>{option.label}</SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       );
     case 'conditional':
     default:
