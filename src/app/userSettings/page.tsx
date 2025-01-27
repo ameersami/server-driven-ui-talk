@@ -1,16 +1,20 @@
 'use client';
 
-import { type ChangeEvent, FormEvent, startTransition, useActionState } from 'react';
+import { type ChangeEvent, useActionState, useTransition } from 'react';
 
 import styles from './page.module.css';
 import { Input } from '@/Components/ui/input';
+import getUserData from '@/serverFns/getUserData';
 
 const UserSettingsPage = () => {
   
+  const [isPending2, startTransition] = useTransition();
   const [state, submitAction, isPending] = useActionState<FormData, ChangeEvent<HTMLInputElement>>(
     async (previousState, newComponentData) => {
+      const userData = await getUserData();
       console.log('previousState', previousState);
       console.log('newComponentData', newComponentData.target.value);
+      console.log('userData', userData);
 
       previousState.set('name', newComponentData.target.value);
 

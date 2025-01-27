@@ -1,12 +1,29 @@
 import { type FormComponent } from "@/utils/userSettings/User Configuration UI Schemas";
+import { Input } from "../ui/input";
 
-const ComponentFactory = (component: FormComponent) => {
+export type Component = {
+  defaultValue: string;
+} & FormComponent
+
+const ComponentFactory = (component: Component) => {
   switch (component.type) {
     case 'textInput':
       return (
-        <div>
-          Hi I'm a text input
-        </div>
+        <>
+          <label
+            htmlFor={component.id}
+            key={`${component.id}-label`}
+          >
+            {component.label}
+          </label>
+          <Input
+            key={`${component.id}-input`}
+            id={component.id}
+            name={component.label}
+            type="text"
+            defaultValue={component.defaultValue ?? ''}
+          />
+        </>
       );
     case 'multiSelect':
       return (
