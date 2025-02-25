@@ -1,0 +1,19 @@
+.urgentIndicator {
+  transition: 0.2s ease-in-out all;
+  animation: UrgentFlashing 3s ease-in-out 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes UrgentFlashing {
+  0% {
+    background: white;
+  }
+
+  50% {
+    background: var(--colors_ORANGE_300);
+  }
+
+  100% {
+    background: white;
+  }
+}

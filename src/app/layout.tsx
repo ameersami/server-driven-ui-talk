@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import Link from 'next/link';
+
+import './globals.css';
+import './theme.css';
+import { GlobalNavigation } from 'lib';
+import Image from 'next/image';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +30,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <nav>
-          <Link href="/userSettings">User Settings</Link>
-          <Link href="/newsFeed">News Feed</Link>
-          <Link href="/widgetDashboard">Widget Dashboard</Link>
-        </nav>
+        <GlobalNavigation
+          customLogo={(<Image src="/ameerAvatar.png" alt="Ameer Logo" width={25} height={25} />)}
+          navItems={[
+            {
+              title: 'User Settings',
+              link: '#',
+              customComponent: (
+                <Link href="/userSettings">User Settings</Link>
+              )
+            },
+            {
+              title: 'News Feed',
+              link: '#',
+              customComponent: (
+                <Link href="/newsFeed">News Feed</Link>
+              )
+            },
+            {
+              title: 'Widget Dashboard',
+              link: '#',
+              customComponent: (
+                <Link href="/widgetDashboard">Widget Dashboard</Link>
+              )
+            }
+          ]}
+        />
         {children}
       </body>
     </html>

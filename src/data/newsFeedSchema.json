@@ -1,0 +1,692 @@
+[
+  {
+    "id": "news-001",
+    "type": "article",
+    "title": "Breaking News Headline",
+    "subtitle": "Key developments in this major story",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "/images/authors/jane-smith.jpg"
+    },
+    "category": "Politics",
+    "imageUrl": "/images/news/headline-001.jpg",
+    "badge": {
+      "text": "Breaking",
+      "type": "urgent"
+    }
+  },
+  {
+    "id": "news-101",
+    "type": "video",
+    "format": "featured",
+    "title": "Behind the Scenes: Tokyo Street Food",
+    "category": "Food & Culture",
+    "imageUrl": "/images/news/food-tokyo-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "/images/authors/jane-smith.jpg"
+    }
+  },
+  {
+    "id": "news-102",
+    "type": "article",
+    "format": "compact",
+    "title": "AI Breakthrough in Climate Research",
+    "category": "Technology",
+    "imageUrl": "/images/news/tech-ai-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "/images/authors/jane-smith.jpg"
+    }
+  },
+  {
+    "id": "news-103",
+    "type": "gallery",
+    "format": "wide",
+    "title": "Wildlife Photography Awards 2025",
+    "category": "Nature",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "/images/authors/jane-smith.jpg"
+    },
+    "images": [
+      {
+        "id": "img-001",
+        "url": "/images/news/wildlife-001.jpg",
+        "caption": "Grand Prize Winner - Snow Leopard at Dawn",
+        "photographer": "Jane Smith"
+      },
+      {
+        "id": "img-002",
+        "url": "/images/news/wildlife-002.jpg",
+        "caption": "Runner Up - Hummingbirds in Flight",
+        "photographer": "Michael Chen"
+      },
+      {
+        "id": "img-003",
+        "url": "/images/news/wildlife-003.jpg",
+        "caption": "People's Choice - African Elephants",
+        "photographer": "Sarah Johnson"
+      }
+    ]
+  },
+  {
+    "id": "news-104",
+    "type": "podcast",
+    "format": "compact",
+    "title": "The Future of Space Travel",
+    "category": "Science",
+    "imageUrl": "/images/news/space-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "/images/authors/jane-smith.jpg"
+    }
+  },
+  {
+    "id": "news-002",
+    "type": "article",
+    "title": "Global Climate Summit Concludes",
+    "subtitle": "World leaders reach historic agreement",
+    "timestamp": "2025-01-20T09:45:00Z",
+    "author": {
+      "name": "Robert Chen",
+      "avatar": "/images/authors/robert-chen.jpg"
+    },
+    "category": "Environment",
+    "imageUrl": "/images/news/climate-001.jpg"
+  },
+  {
+    "id": "news-003",
+    "type": "article",
+    "title": "Space Mission Launch Success",
+    "subtitle": "New era of space exploration begins",
+    "timestamp": "2025-01-20T09:30:00Z",
+    "author": {
+      "name": "Sarah Johnson",
+      "avatar": "/images/authors/sarah-johnson.jpg"
+    },
+    "category": "Science",
+    "imageUrl": "/images/news/space-001.jpg"
+  },
+  {
+    "id": "news-010",
+    "type": "article",
+    "title": "Artificial Intelligence Breakthrough",
+    "subtitle": "Revolutionary advancement in machine learning",
+    "timestamp": "2025-01-20T08:15:00Z",
+    "author": {
+      "name": "David Lee",
+      "avatar": "/images/authors/david-lee.jpg"
+    },
+    "category": "Technology",
+    "imageUrl": "/images/news/ai-001.jpg"
+  },
+  {
+    "id": "news-011",
+    "type": "article",
+    "title": "Major Sports Championship Final",
+    "subtitle": "Historic match breaks viewing records",
+    "timestamp": "2025-01-20T08:00:00Z",
+    "author": {
+      "name": "Mike Thompson",
+      "avatar": "/images/authors/mike-thompson.jpg"
+    },
+    "category": "Sports",
+    "imageUrl": "/images/news/sports-002.jpg"
+  },
+  {
+    "id": "news-004",
+    "type": "article",
+    "title": "Technology Update",
+    "subtitle": "Latest developments in tech",
+    "timestamp": "2025-01-20T09:30:00Z",
+    "author": {
+      "name": "John Doe",
+      "avatar": "/images/authors/john-doe.jpg"
+    },
+    "category": "Technology",
+    "imageUrl": "/images/news/tech-001.jpg",
+    "readTime": "5 min"
+  },
+  {
+    "id": "news-005",
+    "type": "article",
+    "title": "Economic Forecast 2025",
+    "subtitle": "Expert analysis of market trends",
+    "timestamp": "2025-01-20T09:15:00Z",
+    "author": {
+      "name": "Maria Garcia",
+      "avatar": "/images/authors/maria-garcia.jpg"
+    },
+    "category": "Business",
+    "imageUrl": "/images/news/economy-001.jpg",
+    "readTime": "8 min"
+  },
+  {
+    "id": "news-006",
+    "type": "article",
+    "title": "Healthcare Innovation",
+    "subtitle": "Breakthrough in medical research",
+    "timestamp": "2025-01-20T09:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    },
+    "category": "Health",
+    "imageUrl": "/images/news/health-001.jpg",
+    "readTime": "6 min"
+  },
+  {
+    "id": "news-012",
+    "type": "article",
+    "title": "Green Energy Revolution",
+    "subtitle": "New sustainable power breakthrough",
+    "timestamp": "2025-01-20T07:45:00Z",
+    "author": {
+      "name": "Lisa Green",
+      "avatar": "/images/authors/lisa-green.jpg"
+    },
+    "category": "Environment",
+    "imageUrl": "/images/news/energy-001.jpg",
+    "readTime": "7 min"
+  },
+  {
+    "id": "news-013",
+    "type": "article",
+    "title": "Education System Reform",
+    "subtitle": "Major changes in learning approach",
+    "timestamp": "2025-01-20T07:30:00Z",
+    "author": {
+      "name": "Prof. Alan Brown",
+      "avatar": "/images/authors/alan-brown.jpg"
+    },
+    "category": "Education",
+    "imageUrl": "/images/news/education-001.jpg",
+    "readTime": "10 min"
+  },
+  {
+    "id": "news-014",
+    "type": "article",
+    "title": "Urban Development Plan",
+    "subtitle": "City announces major infrastructure project",
+    "timestamp": "2025-01-20T07:15:00Z",
+    "author": {
+      "name": "Rachel Martinez",
+      "avatar": "/images/authors/rachel-martinez.jpg"
+    },
+    "category": "Local",
+    "imageUrl": "/images/news/urban-001.jpg",
+    "readTime": "4 min"
+  },
+  {
+    "id": "news-007",
+    "type": "article",
+    "format": "compact",
+    "title": "Sports Update",
+    "category": "Sports",
+    "imageUrl": "/images/news/sports-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-008",
+    "type": "article",
+    "format": "compact",
+    "title": "Entertainment Weekly Recap",
+    "category": "Entertainment",
+    "imageUrl": "/images/news/entertainment-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-009",
+    "type": "article",
+    "format": "compact",
+    "title": "Cultural Festival Preview",
+    "category": "Culture",
+    "imageUrl": "/images/news/culture-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-015",
+    "type": "article",
+    "format": "compact",
+    "title": "Food Trends 2025",
+    "category": "Lifestyle",
+    "imageUrl": "/images/news/food-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-016",
+    "type": "article",
+    "format": "compact",
+    "title": "Travel Destinations Guide",
+    "category": "Travel",
+    "imageUrl": "/images/news/travel-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-017",
+    "type": "article",
+    "format": "compact",
+    "title": "Fashion Week Highlights",
+    "category": "Fashion",
+    "imageUrl": "/images/news/fashion-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-018",
+    "type": "article",
+    "format": "compact",
+    "title": "Book Review Roundup",
+    "category": "Literature",
+    "imageUrl": "/images/news/books-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-105",
+    "type": "article",
+    "format": "featured",
+    "title": "Sustainable Architecture Trends",
+    "category": "Design",
+    "imageUrl": "/images/news/architecture-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-106",
+    "type": "livestream",
+    "format": "wide",
+    "title": "Global Music Festival Coverage",
+    "category": "Entertainment",
+    "imageUrl": "/images/news/music-fest-001.jpg",
+    "streamStatus": "live",
+    "viewerCount": 15234,
+    "startedAt": "2025-02-09T18:00:00Z",
+    "estimatedDuration": "180" ,
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-107",
+    "type": "interactive",
+    "format": "featured",
+    "title": "Explore Ancient Roman Cities",
+    "category": "History",
+    "imageUrl": "/images/news/rome-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-108",
+    "type": "article",
+    "format": "compact",
+    "title": "Mental Health in the Digital Age",
+    "category": "Health",
+    "imageUrl": "/images/news/health-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-109",
+    "type": "video",
+    "format": "wide",
+    "title": "Inside the World's Top Restaurants",
+    "category": "Food & Dining",
+    "imageUrl": "/images/news/restaurants-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-110",
+    "type": "gallery",
+    "format": "compact",
+    "title": "Street Art Around the World",
+    "category": "Arts & Culture",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    },
+    "images": [
+      {
+        "id": "img-004",
+        "url": "/images/news/street-art-001.jpg",
+        "caption": "Berlin Wall Mural",
+        "photographer": "David Miller"
+      },
+      {
+        "id": "img-005",
+        "url": "/images/news/street-art-002.jpg",
+        "caption": "Melbourne Laneway Art",
+        "photographer": "Emma Wilson"
+      },
+      {
+        "id": "img-006",
+        "url": "/images/news/street-art-003.jpg",
+        "caption": "New York Subway Installation",
+        "photographer": "Carlos Rodriguez"
+      },
+      {
+        "id": "img-007",
+        "url": "/images/news/street-art-004.jpg",
+        "caption": "Tokyo Digital Street Art",
+        "photographer": "Yuki Tanaka"
+      }
+    ]
+  },
+  {
+    "id": "news-111",
+    "type": "article",
+    "title": "Quantum Computing Milestone",
+    "subtitle": "Scientists achieve breakthrough in quantum error correction",
+    "timestamp": "2025-02-09T14:30:00Z",
+    "author": {
+      "name": "Dr. Emily Zhang",
+      "avatar": "/images/authors/emily-zhang.jpg"
+    },
+    "category": "Technology",
+    "imageUrl": "/images/news/quantum-001.jpg",
+    "readTime": "7 min"
+  },
+  {
+    "id": "news-112",
+    "type": "gallery",
+    "format": "wide",
+    "title": "Modern Architecture Around the World",
+    "category": "Design",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    },
+    "images": [
+      {
+        "id": "img-008",
+        "url": "/images/news/architecture-dubai-001.jpg",
+        "caption": "Dubai's Latest Skyscraper",
+        "photographer": "Hassan Ahmed"
+      },
+      {
+        "id": "img-009",
+        "url": "/images/news/architecture-singapore-001.jpg",
+        "caption": "Singapore's Green Buildings",
+        "photographer": "Lin Wei"
+      },
+      {
+        "id": "img-010",
+        "url": "/images/news/architecture-oslo-001.jpg",
+        "caption": "Oslo's Sustainable Design",
+        "photographer": "Erik Larsson"
+      }
+    ]
+  },
+  {
+    "id": "news-113",
+    "type": "livestream",
+    "format": "featured",
+    "title": "E-Sports Championship Finals",
+    "category": "Gaming",
+    "imageUrl": "/images/news/esports-001.jpg",
+    "streamStatus": "live",
+    "viewerCount": 234567,
+    "startedAt": "2025-02-09T15:00:00Z",
+    "estimatedDuration": "240",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-114",
+    "type": "article",
+    "format": "compact",
+    "title": "New Biodegradable Materials",
+    "subtitle": "Revolutionary eco-friendly packaging solution",
+    "timestamp": "2025-02-09T13:45:00Z",
+    "author": {
+      "name": "Thomas Green",
+      "avatar": "/images/authors/thomas-green.jpg"
+    },
+    "category": "Science",
+    "imageUrl": "/images/news/materials-001.jpg",
+    "readTime": "5 min"
+  },
+  {
+    "id": "news-115",
+    "type": "video",
+    "format": "wide",
+    "title": "Deep Ocean Discoveries",
+    "category": "Science",
+    "imageUrl": "/images/news/ocean-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-116",
+    "type": "article",
+    "title": "Global Economic Summit",
+    "subtitle": "World leaders address financial challenges",
+    "timestamp": "2025-02-09T12:30:00Z",
+    "author": {
+      "name": "Alexandra Peters",
+      "avatar": "/images/authors/alexandra-peters.jpg"
+    },
+    "category": "Business",
+    "imageUrl": "/images/news/economy-002.jpg",
+    "badge": {
+      "text": "Breaking",
+      "type": "urgent"
+    }
+  },
+  {
+    "id": "news-117",
+    "type": "podcast",
+    "format": "compact",
+    "title": "Future of Work Discussion",
+    "category": "Business",
+    "imageUrl": "/images/news/workplace-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-118",
+    "type": "gallery",
+    "format": "wide",
+    "title": "Fashion Week Milano 2025",
+    "category": "Fashion",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    },
+    "images": [
+      {
+        "id": "img-011",
+        "url": "/images/news/fashion-milan-001.jpg",
+        "caption": "Opening Show Highlights",
+        "photographer": "Isabella Romano"
+      },
+      {
+        "id": "img-012",
+        "url": "/images/news/fashion-milan-002.jpg",
+        "caption": "Sustainable Fashion Showcase",
+        "photographer": "Marco Rossi"
+      },
+      {
+        "id": "img-013",
+        "url": "/images/news/fashion-milan-003.jpg",
+        "caption": "Street Style Trends",
+        "photographer": "Sophie Laurent"
+      }
+    ]
+  },
+  {
+    "id": "news-119",
+    "type": "interactive",
+    "format": "featured",
+    "title": "Mars Colony Simulator",
+    "category": "Science",
+    "imageUrl": "/images/news/mars-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-120",
+    "type": "article",
+    "format": "compact",
+    "title": "Urban Farming Revolution",
+    "category": "Environment",
+    "imageUrl": "/images/news/urban-farming-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-121",
+    "type": "video",
+    "format": "featured",
+    "title": "Traditional Crafts in Modern Age",
+    "category": "Culture",
+    "imageUrl": "/images/news/crafts-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-122",
+    "type": "article",
+    "title": "Medical Breakthrough in Cancer Research",
+    "subtitle": "New treatment shows promising results",
+    "timestamp": "2025-02-09T11:15:00Z",
+    "author": {
+      "name": "Dr. Sarah Martinez",
+      "avatar": "/images/authors/sarah-martinez.jpg"
+    },
+    "category": "Health",
+    "imageUrl": "/images/news/medical-001.jpg",
+    "readTime": "8 min"
+  },
+  {
+    "id": "news-123",
+    "type": "livestream",
+    "format": "wide",
+    "title": "Solar Eclipse Live Coverage",
+    "category": "Science",
+    "imageUrl": "/images/news/eclipse-001.jpg",
+    "streamStatus": "scheduled",
+    "viewerCount": 0,
+    "startedAt": "2025-02-10T12:00:00Z",
+    "estimatedDuration": "180",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-124",
+    "type": "article",
+    "format": "compact",
+    "title": "Cybersecurity Trends 2025",
+    "category": "Technology",
+    "imageUrl": "/images/news/cyber-001.jpg",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    }
+  },
+  {
+    "id": "news-125",
+    "type": "gallery",
+    "format": "wide",
+    "title": "World's Most Remote Places",
+    "category": "Travel",
+    "timestamp": "2025-01-20T10:00:00Z",
+    "author": {
+      "name": "Dr. James Wilson",
+      "avatar": "/images/authors/james-wilson.jpg"
+    },
+    "images": [
+      {
+        "id": "img-014",
+        "url": "/images/news/remote-001.jpg",
+        "caption": "Antarctic Research Station",
+        "photographer": "James Wilson"
+      },
+      {
+        "id": "img-015",
+        "url": "/images/news/remote-002.jpg",
+        "caption": "Himalayan Monastery",
+        "photographer": "Raj Patel"
+      },
+      {
+        "id": "img-016",
+        "url": "/images/news/remote-003.jpg",
+        "caption": "Amazon Rainforest Village",
+        "photographer": "Maria Santos"
+      }
+    ]
+  }
+]

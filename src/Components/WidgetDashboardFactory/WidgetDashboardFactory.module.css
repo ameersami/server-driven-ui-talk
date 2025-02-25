@@ -1,0 +1,22 @@
+.column {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 16px;
+  grid-column: span attr(data-col type(<number>), 1);
+  grid-row: span attr(data-row type(<number>), 1);
+}
+
+.columnFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.column .recharts-responsive-container {
+  flex: 1;
+  min-height: 0;
+}
+
+.table table tfoot td > div div {
+  padding-top: 0 !important;
+}

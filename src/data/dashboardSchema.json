@@ -1,0 +1,351 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "layout": {
+      "type": "grid",
+      "columns": 12,
+      "spacing": 16,
+      "breakpoints": {
+        "lg": 1200,
+        "md": 996,
+        "sm": 768,
+        "xs": 480
+      },
+      "widgets": [
+        {
+          "id": "total-products-metric",
+          "type": "metrics-card",
+          "title": "Total Products",
+          "position": {
+            "width": 3,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Products",
+                "value": 1525,
+                "format": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "total-sales-metric",
+          "type": "metrics-card",
+          "title": "Total Sales",
+          "position": {
+            "width": 3,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Sales",
+                "value": 10892,
+                "format": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "total-income-metric",
+          "type": "metrics-card",
+          "title": "Total Income",
+          "position": {
+            "width": 3,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Income",
+                "value": 157342,
+                "format": "currency"
+              }
+            ]
+          }
+        },
+        {
+          "id": "total-expenses-metric",
+          "type": "metrics-card",
+          "title": "Total Expenses",
+          "position": {
+            "width": 3,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Expenses",
+                "value": 12453,
+                "format": "currency"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sales-revenue",
+          "type": "line-chart",
+          "title": "Sales Revenue",
+          "position": {
+            "width": 8,
+            "height": 4
+          },
+          "config": {
+            "dataSource": "/api/sales-revenue",
+            "refreshInterval": 300,
+            "series": [
+              {
+                "name": "One-Time Revenue",
+                "color": "#8884d8"
+              },
+              {
+                "name": "Recurring Revenue",
+                "color": "#82ca9d"
+              }
+            ],
+            "axes": {
+              "x": {
+                "type": "time",
+                "tickUnit": "Date"
+              },
+              "y": {
+                "type": "linear",
+                "tickUnit": "Monetary"
+              }
+            }
+          }
+        },
+        {
+          "id": "top-categories",
+          "type": "bar-chart",
+          "title": "Top Categories",
+          "position": {
+            "width": 4,
+            "height": 4
+          },
+          "config": {
+            "dataSource": "/api/categories",
+            "refreshInterval": 300,
+            "series": [
+              {
+                "name": "Sales",
+                "color": "#8884d8"
+              }
+            ],
+            "axes": {
+              "x": {
+                "type": "category",
+                "tickUnit": "Month"
+              },
+              "y": {
+                "type": "linear",
+                "tickUnit": "Monetary"
+              }
+            },
+            "barOptions": {
+              "barGap": 0,
+              "barCategoryGap": "20%"
+            }
+          }
+        },
+        {
+          "id": "recent-activity",
+          "type": "dataTable",
+          "title": "Recent Activity",
+          "position": {
+            "width": 6,
+            "height": 6
+          },
+          "config": {
+            "dataSource": "/api/recent-activity",
+            "refreshInterval": 300,
+            "pagination": {
+              "enabled": true,
+              "pageSize": 10,
+              "pageSizeOptions": [5, 10, 20]
+            },
+            "columns": [
+              {
+                "field": "type",
+                "header": "Type",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "label",
+                "header": "Details",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "date",
+                "header": "Date",
+                "sortable": true,
+                "filterable": true
+              }
+            ],
+            "features": {
+              "search": {
+                "enabled": true,
+                "placeholder": "Search activity...",
+                "highlightMatches": true
+              },
+              "filter": {
+                "enabled": true,
+                "operators": ["equals", "contains"]
+              },
+              "sort": {
+                "enabled": true,
+                "multiSort": true
+              },
+              "selection": {
+                "enabled": true,
+                "mode": "single",
+                "showCheckbox": false
+              },
+              "export": {
+                "enabled": true,
+                "formats": ["csv", "excel"]
+              },
+              "columnResize": true,
+              "columnReorder": true,
+              "rowReorder": false,
+              "groupBy": {
+                "enabled": false,
+                "expandedByDefault": false
+              }
+            },
+            "style": {
+              "alternateRowColor": true,
+              "hoverable": true,
+              "bordered": true
+            }
+          }
+        },
+        {
+          "id": "top-products",
+          "type": "dataTable",
+          "title": "Top Products",
+          "position": {
+            "width": 6,
+            "height": 6
+          },
+          "config": {
+            "dataSource": "/api/top-products",
+            "refreshInterval": 300,
+            "pagination": {
+              "enabled": true,
+              "pageSize": 5,
+              "pageSizeOptions": [5, 10, 20]
+            },
+            "columns": [
+              {
+                "field": "product",
+                "header": "Product",
+                "sortable": true,
+                "filterable": true,
+                "pinned": "left"
+              },
+              {
+                "field": "stocks",
+                "header": "Stocks",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "price",
+                "header": "Price",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "sales",
+                "header": "Sales",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "earnings",
+                "header": "Earnings",
+                "sortable": true,
+                "filterable": true
+              }
+            ],
+            "features": {
+              "search": {
+                "enabled": true,
+                "placeholder": "Search products...",
+                "highlightMatches": true
+              },
+              "filter": {
+                "enabled": true,
+                "operators": ["equals", "contains", "greaterThan", "lessThan"]
+              },
+              "sort": {
+                "enabled": true,
+                "multiSort": true
+              },
+              "selection": {
+                "enabled": true,
+                "mode": "single",
+                "showCheckbox": false
+              },
+              "export": {
+                "enabled": true,
+                "formats": ["csv", "excel"]
+              },
+              "columnResize": true,
+              "columnReorder": true,
+              "rowReorder": false,
+              "groupBy": {
+                "enabled": false,
+                "expandedByDefault": false
+              }
+            },
+            "style": {
+              "alternateRowColor": true,
+              "hoverable": true,
+              "bordered": true
+            }
+          }
+        }
+      ]
+    },
+    "settings": {
+      "refreshInterval": 300,
+      "layout": {
+        "allowRearrange": true,
+        "allowResize": true,
+        "snapToGrid": true,
+        "compactType": "vertical",
+        "preventCollision": true
+      },
+      "interactions": {
+        "dragAndDrop": true,
+        "resize": true,
+        "maximize": true,
+        "minimize": true,
+        "remove": true
+      },
+      "responsive": {
+        "enabled": true,
+        "breakpoints": {
+          "lg": {
+            "cols": 12,
+            "rowHeight": 100
+          },
+          "md": {
+            "cols": 8,
+            "rowHeight": 80
+          },
+          "sm": {
+            "cols": 4,
+            "rowHeight": 60
+          }
+        }
+      }
+    }
+  }
+}

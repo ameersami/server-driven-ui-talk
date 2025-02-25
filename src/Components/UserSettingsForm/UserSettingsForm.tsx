@@ -1,11 +1,16 @@
 'use client';
 
-import { type ChangeEvent, createContext, type JSX, startTransition, useActionState, useTransition } from 'react';
+import { type ChangeEvent, type JSX, startTransition, useActionState } from 'react';
+import { Avatar, Card, Row, Text } from 'lib';
+import Image from 'next/image';
 
-import { Input } from '@/Components/ui/input';
-import getUserSettingsComponents from '@/serverFns/getUserSettingsComponents';
-import { FormComponent } from '@/utils/userSettings/User Configuration UI Schemas';
-import ComponentFactory from '../ComponentFactory/ComponentFactory';
+import UserSettingsComponentFactory from '@/Components/UserSettingsComponentFactory/UserSettingsComponentFactory';
+
+import getUserSettingsComponents from '@/functions/userSettings/getUserSettingsComponents';
+
+import { FormComponent } from '@/types/userSettingsSchema';
+
+import styles from './UserSettingsForm.module.css';
 
 const UserSettingsForm: React.FC<{ children: string | JSX.Element | JSX.Element[]; }> = (props) => {
   
@@ -19,11 +24,10 @@ const UserSettingsForm: React.FC<{ children: string | JSX.Element | JSX.Element[
       })) as Array<FormComponent>;
 
       const newComps = await getUserSettingsComponents(convertedComponentData);
-      console.log(newComps);
 
       return newComps;
     },
-    [],
+    []
   );
 
   const handleSubmit = (event: ChangeEvent<HTMLFormElement>) => {
@@ -32,10 +36,36 @@ const UserSettingsForm: React.FC<{ children: string | JSX.Element | JSX.Element[
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      {props.children}
-      {state.map(component => <ComponentFactory key={`fetched-component-${component.id}`} {...component} />)}
-    </form>
+    <Card
+      hasPadding={false}
+      borderColor="var(--colors_GRAY_300)"
+    >
+      <Image
+        src="/userSettingsHero.jpg"
+        blurDataURL="/userSettingsHero.jpg"
+        height={250}
+        width={1500}
+        alt="User settings hero image"
+        className={styles.heroImage}
+      />
+      <Avatar
+        size="xl"
+        src="/ameerAvatar.png"
+        className={styles.avatar}
+      />
+      <Row direction="column" hPadding="m" vPadding="s" columnsHGap="none">
+        <Text spacing="none" textStyle="xxl">Ameer Sami</Text>
+        <Text spacing="none" textStyle="s">@ameersami.com</Text>
+        <Text spacing="m" />
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit}
+        >
+          {props.children}
+          {state.map(component => <UserSettingsComponentFactory key={`fetched-component-${component.id}`} {...component} />)}
+        </form>
+      </Row>
+    </Card>
   );
 }
 

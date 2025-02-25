@@ -1,0 +1,8 @@
+.hiddenDropdownInput {
+  display: none;
+}
+
+.dropdownStyles > div > div:nth-of-type(2) > button {
+  right: 8px;
+  top: 8px;
+}

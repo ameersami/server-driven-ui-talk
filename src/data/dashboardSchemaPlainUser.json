@@ -1,0 +1,274 @@
+{
+  "dashboard": {
+    "title": "My Dashboard",
+    "layout": {
+      "type": "grid",
+      "columns": 12,
+      "spacing": 16,
+      "breakpoints": {
+        "lg": 1200,
+        "md": 996,
+        "sm": 768,
+        "xs": 480
+      },
+      "widgets": [
+        {
+          "id": "my-orders-metric",
+          "type": "metrics-card",
+          "title": "My Orders",
+          "position": {
+            "width": 4,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Orders",
+                "value": 24,
+                "format": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "total-spent-metric",
+          "type": "metrics-card",
+          "title": "Total Spent",
+          "position": {
+            "width": 4,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Total Spent",
+                "value": 1250,
+                "format": "currency"
+              }
+            ]
+          }
+        },
+        {
+          "id": "my-products-metric",
+          "type": "metrics-card",
+          "title": "My Products",
+          "position": {
+            "width": 4,
+            "height": 2
+          },
+          "config": {
+            "metrics": [
+              {
+                "label": "Active Products",
+                "value": 5,
+                "format": "number"
+              }
+            ]
+          }
+        },
+        {
+          "id": "spending-history",
+          "type": "line-chart",
+          "title": "Spending History",
+          "position": {
+            "width": 6,
+            "height": 5
+          },
+          "config": {
+            "dataSource": "/api/user/spending-history",
+            "refreshInterval": 300,
+            "series": [
+              {
+                "name": "Monthly Spending",
+                "color": "#8884d8"
+              }
+            ],
+            "axes": {
+              "x": {
+                "type": "time",
+                "tickUnit": "Month"
+              },
+              "y": {
+                "type": "linear",
+                "tickUnit": "Monetary"
+              }
+            }
+          }
+        },
+        {
+          "id": "recent-orders",
+          "type": "dataTable",
+          "title": "Recent Orders",
+          "position": {
+            "width": 6,
+            "height": 5
+          },
+          "config": {
+            "dataSource": "/api/user/orders",
+            "refreshInterval": 300,
+            "pagination": {
+              "enabled": true,
+              "pageSize": 5,
+              "pageSizeOptions": [5, 10]
+            },
+            "columns": [
+              {
+                "field": "orderDate",
+                "header": "Date",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "orderNumber",
+                "header": "Order #",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "total",
+                "header": "Total",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "status",
+                "header": "Status",
+                "sortable": true,
+                "filterable": true
+              }
+            ],
+            "features": {
+              "search": {
+                "enabled": true,
+                "placeholder": "Search orders...",
+                "highlightMatches": true
+              },
+              "filter": {
+                "enabled": true,
+                "operators": ["equals", "contains"]
+              },
+              "sort": {
+                "enabled": true,
+                "multiSort": false
+              },
+              "export": {
+                "enabled": true,
+                "formats": ["csv"]
+              },
+              "columnResize": true,
+              "columnReorder": false
+            },
+            "style": {
+              "alternateRowColor": true,
+              "hoverable": true,
+              "bordered": true
+            }
+          }
+        },
+        {
+          "id": "my-products",
+          "type": "dataTable",
+          "title": "My Products",
+          "position": {
+            "width": 12,
+            "height": 5
+          },
+          "config": {
+            "dataSource": "/api/user/products",
+            "refreshInterval": 300,
+            "pagination": {
+              "enabled": true,
+              "pageSize": 5,
+              "pageSizeOptions": [5, 10]
+            },
+            "columns": [
+              {
+                "field": "product",
+                "header": "Product",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "purchaseDate",
+                "header": "Purchase Date",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "expiryDate",
+                "header": "Expiry Date",
+                "sortable": true,
+                "filterable": true
+              },
+              {
+                "field": "status",
+                "header": "Status",
+                "sortable": true,
+                "filterable": true
+              }
+            ],
+            "features": {
+              "search": {
+                "enabled": true,
+                "placeholder": "Search products...",
+                "highlightMatches": true
+              },
+              "filter": {
+                "enabled": true,
+                "operators": ["equals", "contains"]
+              },
+              "sort": {
+                "enabled": true,
+                "multiSort": false
+              },
+              "export": {
+                "enabled": false
+              },
+              "columnResize": true,
+              "columnReorder": false
+            },
+            "style": {
+              "alternateRowColor": true,
+              "hoverable": true,
+              "bordered": true
+            }
+          }
+        }
+      ]
+    },
+    "settings": {
+      "refreshInterval": 300,
+      "layout": {
+        "allowRearrange": false,
+        "allowResize": false,
+        "snapToGrid": true,
+        "compactType": "vertical",
+        "preventCollision": true
+      },
+      "interactions": {
+        "dragAndDrop": false,
+        "resize": false,
+        "maximize": true,
+        "minimize": false,
+        "remove": false
+      },
+      "responsive": {
+        "enabled": true,
+        "breakpoints": {
+          "lg": {
+            "cols": 12,
+            "rowHeight": 100
+          },
+          "md": {
+            "cols": 8,
+            "rowHeight": 80
+          },
+          "sm": {
+            "cols": 4,
+            "rowHeight": 60
+          }
+        }
+      }
+    }
+  }
+}

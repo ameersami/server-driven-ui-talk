@@ -1,0 +1,165 @@
+{
+  "type": "form",
+  "title": "User Configuration",
+  "components": [
+    {
+      "type": "select",
+      "id": "userType",
+      "label": "User Type",
+      "required": true,
+      "options": [
+        {"label": "Individual", "value": "individual"},
+        {"label": "Business", "value": "business"},
+        {"label": "Developer", "value": "developer"}
+      ],
+      "defaultValue": "individual"
+    },
+    {
+      "type": "textInput",
+      "id": "email",
+      "label": "Email Address",
+      "required": true,
+      "validations": {
+        "email": true
+      }
+    },
+    {
+      "type": "conditional",
+      "dependsOn": {
+        "field": "userType",
+        "value": "individual"
+      },
+      "components": [
+        {
+          "type": "textInput",
+          "id": "firstName",
+          "label": "First Name",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "id": "lastName",
+          "label": "Last Name",
+          "required": true
+        },
+        {
+          "type": "select",
+          "id": "subscription",
+          "label": "Subscription Type",
+          "options": [
+            {"label": "Free", "value": "free"},
+            {"label": "Premium", "value": "premium"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conditional",
+      "dependsOn": {
+        "field": "userType",
+        "value": "business"
+      },
+      "components": [
+        {
+          "type": "textInput",
+          "id": "companyName",
+          "label": "Company Name",
+          "required": true
+        },
+        {
+          "type": "textInput",
+          "id": "vatNumber",
+          "label": "VAT Number"
+        },
+        {
+          "type": "select",
+          "id": "companySize",
+          "label": "Company Size",
+          "options": [
+            {"label": "1-10", "value": "small"},
+            {"label": "11-50", "value": "medium"},
+            {"label": "51-200", "value": "large"},
+            {"label": "201+", "value": "enterprise"}
+          ]
+        },
+        {
+          "type": "multiSelect",
+          "id": "departments",
+          "label": "Departments",
+          "options": [
+            {"label": "Sales", "value": "sales"},
+            {"label": "Marketing", "value": "marketing"},
+            {"label": "Engineering", "value": "engineering"},
+            {"label": "HR", "value": "hr"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "conditional",
+      "dependsOn": {
+        "field": "userType",
+        "value": "developer"
+      },
+      "components": [
+        {
+          "type": "textInput",
+          "id": "githubUsername",
+          "label": "GitHub Username"
+        },
+        {
+          "type": "multiSelect",
+          "id": "programmingLanguages",
+          "label": "Programming Languages",
+          "options": [
+            {"label": "JavaScript", "value": "js"},
+            {"label": "Python", "value": "python"},
+            {"label": "Java", "value": "java"},
+            {"label": "Go", "value": "go"}
+          ]
+        },
+        {
+          "type": "select",
+          "id": "apiPlan",
+          "label": "API Plan",
+          "required": true,
+          "options": [
+            {"label": "Basic", "value": "basic"},
+            {"label": "Pro", "value": "pro"},
+            {"label": "Enterprise", "value": "enterprise"}
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "betaAccess",
+          "label": "Beta Features Access",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "type": "conditional",
+      "dependsOn": {
+        "field": "userType",
+        "values": ["business", "developer"]
+      },
+      "components": [
+        {
+          "type": "toggle",
+          "id": "twoFactorAuth",
+          "label": "Enable Two-Factor Authentication",
+          "required": true,
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "button",
+      "label": "Save Configuration",
+      "action": "submit",
+      "style": "primary"
+    }
+  ]
+}

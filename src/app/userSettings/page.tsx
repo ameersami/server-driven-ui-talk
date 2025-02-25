@@ -1,16 +1,20 @@
 import UserSettingsForm from '@/Components/UserSettingsForm/UserSettingsForm';
+import UserSettingsComponentFactory from '@/Components/UserSettingsComponentFactory/UserSettingsComponentFactory';
+
+import getUserSettingsComponents from '@/functions/userSettings/getUserSettingsComponents';
+
 import styles from './page.module.css';
-import getUserSettingsComponents from '@/serverFns/getUserSettingsComponents';
-import ComponentFactory from '@/Components/ComponentFactory/ComponentFactory';
 
 const UserSettingsPage = async () => {
   
   const initialComponentState = await getUserSettingsComponents([]);
 
   return (
-    <UserSettingsForm>
-      {initialComponentState.map(component => <ComponentFactory {...component} />)}
-    </UserSettingsForm>
+    <div className={styles.container}>
+      <UserSettingsForm>
+        {initialComponentState.map(component => <UserSettingsComponentFactory {...component} />)}
+      </UserSettingsForm>
+    </div>
   );
 }
 
