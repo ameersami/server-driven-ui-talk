@@ -11,12 +11,6 @@ export default async (offset: number) => {
     return null;
   }
 
-  await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({});
-    }, 100);
-  });
-
   return slicedPosts.map(post => (
     <NewsFeedFactory key={`news-feed-post-item-${post.id}-${post.author}`} post={post as NewsPost} />
   ));
